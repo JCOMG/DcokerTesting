@@ -27,8 +27,9 @@ i create a image called my-flask-app and use container to run it
 
 
 加github actions進來, 當你發PR進main branch的時候會trgger github actions 去跑build和test
+我change branch called testing, change return "ok" -> return "okkkkkk"
+and merge tigether 
 
 ![image](https://github.com/user-attachments/assets/7197a165-0aaf-410a-8305-1892d1db9fc2)
 
-我change branch called testing, change return "ok" -> return "okkkkkk"
-and merge tigether 
+
