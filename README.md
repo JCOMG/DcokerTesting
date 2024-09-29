@@ -1,4 +1,3 @@
-![image](https://github.com/user-attachments/assets/f6e88907-79a1-4393-a854-05860c3de070)# DcokerTesting
 
 CI/CD
 - 什麼是CI/CD -> Continue Integrate / Continue Deployment  
@@ -16,8 +15,20 @@ Github actions
 - 
 
 寫一支用來確認server是不是還活著的api GET /heath 回傳200, 要有unit test
+Using postman to test it
 
 ![image](https://github.com/user-attachments/assets/fbfcdb1d-c201-4344-ad9b-3dc020f2f370)
 
 
+用docker build image, 和用container把server跑起來
+i create a image called my-flask-app and use container to run it 
+![image](https://github.com/user-attachments/assets/aefe02c5-62c3-41ac-b3b1-46ba0a727b46)
+![image](https://github.com/user-attachments/assets/c743637d-7a13-4fac-8cf1-8b1eb4bd617f)
 
+
+加github actions進來, 當你發PR進main branch的時候會trgger github actions 去跑build和test
+
+![image](https://github.com/user-attachments/assets/7197a165-0aaf-410a-8305-1892d1db9fc2)
+
+我change branch called testing, change return "ok" -> return "okkkkkk"
+and merge tigether 
