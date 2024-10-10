@@ -1,31 +1,32 @@
-name: Deploy Flask App
+name: Deploy Python myflask
 
 on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Check my code
+        uses: actions/checkout@v3
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v1
-
-      - name: Build Docker image
-        run: |
-          docker build -t jimmyomg/my-flask-app .
-
-      - name: Log in to Docker Hub
-        uses: docker/login-action@v1
+      - name: Set up Python Version
+        uses: actions/setup-python@v4
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+          python-version: "3.8"
 
-      - name: Push Docker image
+      - name: Install dependencies
         run: |
-          docker push your-dockerhub-username/your-image-name
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # 執行 Python 測試
+      - name: Run tests
+        run: |
+          python -m pytest discover
