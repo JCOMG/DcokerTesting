@@ -10,7 +10,11 @@ def index():
     return "okkkkkkk!!!!!!!!!"
 
 def test_index():
-    assert True
+    tester = app.test_client()
+    response = tester.get('/index')
+    assert response.status_code == 200
+    assert b"okkkkkkk!!!!!!!!!" in response.data
+
 
 
 if __name__ == '__main__':
