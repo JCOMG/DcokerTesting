@@ -1,9 +1,8 @@
 import os
 from flask import Flask
-# from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] =  b'WR#&f&+%78er0we=%799eww+#7^90-;s'
+app.config['SECRET_KEY'] = b'WR#&f&+%78er0we=%799eww+#7^90-;s'
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'data', 'data.sqlite')
