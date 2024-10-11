@@ -8,11 +8,33 @@ Python version: 3.8
 - Creating docker image and container to run the application
 - Push into Github Actions to run the tests
 
-## How to use
+## How to use - Run in Docker
 Use below curl command to call API
 
-``` bash
+Required 
+- install docker
+  
+## Steps 
+### step 1 : pull docker image
+
+```bash
+
+docker pull jimmyomg/my-flask-app
+
+```
+
+### step 2 : run docker image
+
+```bash
+
+docker run -it --rm -p 5000:5000 jimmyomg/my-flask-app
+
+```
+### step 3 : execute curl
+
+```bash
 curl -X GET http://127.0.0.1:5000/index
+```
 
 
 
