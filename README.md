@@ -19,7 +19,7 @@ Required
 
 ```bash
 
-docker pull jimmyomg/my-flask-app
+docker pull jimmyomg/my-flask-version2
 
 ```
 
@@ -27,7 +27,7 @@ docker pull jimmyomg/my-flask-app
 
 ```bash
 
-docker run -it --rm -p 5000:5000 jimmyomg/my-flask-app
+docker run -it --rm -p 5000:5000 jimmyomg/my-flask-version2
 
 ```
 ### step 3 : execute curl
