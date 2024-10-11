@@ -3,7 +3,7 @@ FROM python:${PYTHON_VERSION}-slim AS baseworkdir
 
 WORKDIR /app
 
-COPY app/ /app
+COPY app /app
 
 RUN pip install --no-cache-dir -r /app/requirements.txt
 
