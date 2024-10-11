@@ -33,7 +33,7 @@ docker run -it --rm -p 5000:5000 jimmyomg/my-flask-app
 ### step 3 : execute curl
 
 ```bash
-curl -X GET http://127.0.0.1:5000/index
+curl -X GET http://127.0.0.1:5000/health
 ```
 
 ## Tech 
