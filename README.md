@@ -1,3 +1,21 @@
+# Simple build Docker with Github actions 
+This is a simple Flask-based system with Docker and Github actions.
+
+Python version: 3.8
+
+## Feature 
+- Building a simple flask-based web application
+- Creating docker image and container to run the application
+- Push into Github Actions to run the tests
+
+## How to use
+Use below curl command to call API
+
+``` bash
+curl -X GET http://127.0.0.1:5000/index
+
+
+
 
 CI/CD
 - 什麼是CI/CD -> Continue Integrate / Continue Deployment  
