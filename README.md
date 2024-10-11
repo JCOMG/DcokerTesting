@@ -19,7 +19,7 @@ Required
 
 ```bash
 
-docker pull jimmyomg/my-flask-app
+docker pull jimmyomg/my-flask-version2
 
 ```
 
