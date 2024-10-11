@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/')
 
 @app.route('/health')
-def index():
+def health():
     return "okkkkkkk!!!!!!!!!"
 
 def test_index():
