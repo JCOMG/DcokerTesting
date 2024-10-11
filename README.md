@@ -36,6 +36,13 @@ docker run -it --rm -p 5000:5000 jimmyomg/my-flask-app
 curl -X GET http://127.0.0.1:5000/index
 ```
 
+## Tech 
+- Python
+- Flask
+- RESTful API
+- Docker
+- Github Action
+
 
 
 
