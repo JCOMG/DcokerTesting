@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check my code
+      - name: Check out the repository
         uses: actions/checkout@v3
 
       - name: Set up Python Version
@@ -32,6 +32,7 @@ jobs:
   build_and_push_docker:
     runs-on: ubuntu-latest
     needs: test
+
     steps:
       - name: Check out the repository
         uses: actions/checkout@v3
