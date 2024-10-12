@@ -34,8 +34,8 @@ RUN adduser \
 # Leverage a cache mount to /root/.cache/pip to speed up subsequent builds.
 # Leverage a bind mount to requirements.txt to avoid having to copy them into
 # into this layer.
-COPY app/requirements.txt /requirements.txt
-RUN python -m pip install -r /requirements.txt
+COPY app /app
+RUN python -m pip install -r /app/requirements.txt
 
 
 
